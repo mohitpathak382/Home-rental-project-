@@ -1,0 +1,396 @@
+#header {
+  position: fixed;
+  top: 0%;
+  width: 100vw;
+  height: 10vmin;
+  background: #040625;
+  border: 2px solid rgb(119, 119, 119) ;
+}
+#header img {
+  float: left;
+  width: 7vw;
+  background-color: #bcb1b1;
+  height: 8.5vh;
+  cursor: pointer;
+  margin-left: 0.3vw;
+  margin-top: 0.3%;
+  /* border:1 px solid rgb(14, 13, 59); */
+  border-radius: 5px ;
+}
+
+.icons {
+  color: white;
+  float: right;
+  width: 10%;
+  height: 12%;
+  /* background: linear-gradient(to right, #6d656e, #d9d6db); */
+  padding: 3px;
+  margin-top: 0.9em;
+  margin-left: 0.5em;
+  /* border: 1px solid rgb(33, 2, 41); */
+}
+.icons:hover {
+  background: #878487;
+  color: #000000;
+}
+.headerDiv {
+  text-align: center;
+  font-size: 1.37vw;
+  font-family: "Krub", sans-serif;
+}
+#Login {
+  position: relative;
+  z-index: 2;
+  color: #000000;
+  border-bottom: 15%;
+  margin-top: 10%;
+  margin-left: 35%;
+  width: 30%;
+  height: 45vmin;
+  background-color: rgba(199, 199, 199, 0.807);
+  border-radius: 1vmin;
+  padding: 2vmin;
+  opacity: 0.8;
+}
+#Form {
+  background-color: #000000;
+}
+.slideShow {
+  position: relative;
+  width: 100vw;
+  height: 80vmin;
+  margin-top: -66.5vmin /*-500px*/;
+  z-index: -1;
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  z-index: 2;
+}
+#rightCtrl {
+  left: 96%;
+}
+.slides > img {
+  position: absolute; /**/
+  z-index: -1;
+  left: 0%;
+  width: 100%;
+  top: 95.6%;
+  height: 110%; /**/
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px;
+  border-radius: 4px;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 3px solid #555;
+}
+input[type="button"],
+input[type="submit"] {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  margin: 17px 2px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.5vw;
+  padding-right: 5%;
+}
+button {
+  background-color:#040625 ;
+  color: white;
+  border :none;
+  padding: 10px 10px;
+  text-decoration: none;
+  margin: 4px 3px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.5vw;
+  padding-right: 5%;
+}
+#btns {
+  margin-right: 20px;
+}
+
+#quote {
+  position: absolute;
+  left: 0%;
+  top: 95%;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to  right, #aa6fba , #4f055e);
+
+  color: black;
+}
+#quoteMsg1 {
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  font-size: 4vmin;
+  font-weight: 700;
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+#quoteMsg2 {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  font-size: 4vmin;
+  font-weight: 700;
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+#quoteMsg3 {
+  position: absolute;
+  left: 15%;
+  top: 65%;
+  font-size: 4.6vmin;
+  color: rgb(0, 0, 0);
+  font-family: monospace;
+  text-shadow: 2px 2px #eb8a3b;
+  font-weight: 800;
+}
+#stories {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  height: 60%;
+  top: 135%;
+  background: linear-gradient(to  right, #aa6fba , #4f055e);
+
+}
+#sTop {
+  position: absolute;
+  top: 5%;
+  left: 35%;
+  font-size: 5vmin;
+  color: rgb(221, 196, 196);
+  letter-spacing: 4px;
+  font-family:  Georgia, serif;;
+  font-weight: 650;
+  font-style: italic;
+  line-break: normal;
+}
+#story1,
+#story2,
+#story3 {
+  position: absolute;
+  left: 10%;
+  top: 28%;
+  width: 20%;
+  height: 62%;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 1%;
+  box-shadow: 5px 5px 5px 1px grey;
+}
+#story2 {
+  left: 40%;
+}
+#story3 {
+  left: 70%;
+}
+.storyImg {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 60%;
+}
+.Names {
+  position: absolute;
+  top: 68%;
+  left: 30%;
+  font-size: 2.1vmin;
+  font-weight: 600;
+  color: #161616;
+}
+.Story {
+  position: absolute;
+  top: 77%;
+  left: 1%;
+  right: 1%;
+  font-size: 1.5vmin;
+}
+#footer {
+  position: absolute;
+  background: #040625;
+  top: 195%;
+  width: 100%;
+  height: 40%;
+}
+#About {
+  color: white;
+}
+#divider {
+  position: absolute;
+  top: 47.4%;
+  left: 60%;
+  width: 22vmin;
+  height: 5%;
+  border-radius: 5%/5%;
+  transform: skew(6deg, 120deg);
+  background-color: #a20505;
+}
+#AboutUs {
+  position: absolute;
+  left: 14%;
+  top: 10%;
+  color: coral;
+  font-family: sans-serif;
+  font-size: 5vmin;
+}
+#AboutMsg {
+  position: absolute;
+  left: 2%;
+  width: 30%;
+  top: 32%;
+  font-size: 2vmin;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+#img2 {
+  position: absolute;
+  left: 45%;
+}
+#img3 {
+  position: absolute;
+  left: 55%;
+}
+#vam,
+#nit,
+#mad {
+  position: absolute;
+  left: 37%;
+  top: 43%;
+  color: white;
+}
+#nit {
+  left: 47%;
+}
+#mad {
+  left: 57%;
+}
+#copyrights {
+  position: absolute;
+  left: 2%;
+  top: 70%;
+  font-size: 2vmin;
+  color: white;
+}
+
+#version {
+  position: absolute;
+  left: 2%;
+  top: 76%;
+  font-size: 1.9vmin;
+  color: white;
+}
+
+#Feedback {
+  position: absolute;
+  left: 65%;
+  width: 35%;
+  height: 100%;
+}
+#FeedbackHead {
+  position: absolute;
+  left: 45%;
+  top: 10%;
+  color: white;
+  font-family: sans-serif;
+  font-size: 4vmin;
+}
+#mailTxt {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  font-size: 3vmin;
+  color: #d3da0c;
+  letter-spacing: 1px;
+}       #gmailIcon{
+  position: absolute;
+  left:50%;
+  top:31%;
+  font-size:2.2vmin;
+  color:grey;
+}
+.gmail{
+  color :red;
+}
+
+ #sm{
+ position: absolute;
+ left:30%;
+ top:55%;
+ font-size:2.5vmin;
+ font-family:monospace;
+ letter-spacing:6px;
+ color: white;
+}
+#fIcon,#iIcon{
+   position: absolute; 
+   left:40%;
+   top:65%;
+   width:10%;
+   height:10%;
+   
+}
+.fcol{
+   color: #ffe6e6;
+   font-size: 20px;
+}
+#fIcon > button{
+  text-align: center;
+  height: 45px;
+   border-radius:25%;
+   background-color:#8a0d0d;
+}
+#iIcon{
+    color: white;
+    left:60%;
+}
+.iCol{
+   font-size:20px;
+   color: #c50ea4;
+
+}
+#iIcon >button{
+  text-align: center;
+  height: 45px;
+  padding: 10px;
+  border-radius:25%;
+   background-color:#7b1e6aa9;
+}
+   
+*:focus{
+ outline:none;
+}
+body{
+ overflow-x: hidden;
+ scroll-behavior:smooth;
+}
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: white; /* Green */
+  color: black;
+  border: 2px solid black;
+}
+b {
+  font-size: 1.25vw;
+  font-family: "Krub", sans-serif;
+}
+

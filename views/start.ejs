@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>start</title>
+   <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   <link rel="shortcut icon" href="../images/old logo.svg">
+   <link rel="Stylesheet" type="text/css" href="/style.css">
+   
+</head>
+
+<body>
+   <div id="header">
+      <img src="/images/hrmlogo.svg" alt="logos" onclick="location.href='/' " title="home page" >
+
+      <div id="btns">
+         <button class="icons" id="RegisterIcon" onclick="location.href='/register'">
+            <div class="headerDiv">Register</div>
+         </button>
+         <button class="icons" id="LoginIcon" onclick="location.href='/login'">
+            <div class="headerDiv">Login</div>
+         </button>
+         <button class="icons" id="FeedbackIcon">
+            <div class="headerDiv">Feedback</div>
+         </button>
+         <button class="icons" id="AboutIcon">
+            <div class="headerDiv">About</div>
+         </button>
+      </div>
+   </div>
+
+   <div class="slideShow">
+      <div class="slides">
+         <img style="opacity:1" src="/images/h2.jpeg">
+      </div>
+      <div class="slides">
+         <img style="opacity:1" src="/images/h3.jpg">
+      </div>
+      <div class="slides">
+         <img style="opacity:1" src="/images/h4.jpg">
+      </div>
+      <div class="slides">
+         <img style="opacity:1" src="/images/h1.jpeg">
+      </div>
+      <a class="controls" onclick="nextSlide(+1)">
+         <h2>&#10094;&#10094;</h2>
+      </a>
+      <a class="controls" id="rightCtrl" onclick="nextSlide(-1)">
+         <h2>&#10095;&#10095;</h2>
+      </a>
+   </div>
+   <div id="quote">
+      <p id="quoteMsg1">“Home is where the heart’s tears can dry at their own pace.”</p>
+      <p id="quoteMsg2">'Home is where the heart can laugh without shyness'</p>
+      <p id="quoteMsg3">'We at ApnaGhar  helps you Provide a perfect house .'</p>
+   </div>
+   <div id="stories">
+      <p id="sTop">Many Happy Stories</p>
+      <div id="story1">
+         <img class="storyImg" src="/images/vamsi.jpg">
+         <p class="Names">Lakshya Thakur</p>
+         <p class="Story">"I was looking for a home, when I started searching some property websites on Google. Then I
+            come accros ApnaGhar.com, They helped me
+            choosing my home according to my budget and location."</p>
+      </div>
+      <div id="story2">
+         <img class="storyImg" src="/images/pankaj.jpg">
+         <p class="Names">Pankaj Sharma</p>
+         <p class="Story">"My friend suggested me to search in ApnaGhar.com when I was looking for property. Thanks
+            to my dear friend and ApnaGhar, I finalized my home at geeta bhawan in Indore."</p>
+      </div>
+      <div id="story3">
+         <img class="storyImg" src="/images/ramesh.jpg">
+         <p class="Names">Ramesh Bansal</p>
+         <p class="Story">"A huge thanks to ApnaGhar for their services in fulfilling everyone’s requirements. We will
+            always be grateful to you. Thanks a lot."</p>
+      </div>
+   </div>
+   <div id="footer">
+      <div id="divider"></div>
+      <div id="About">  
+         <p id="AboutUs">About Us</p>
+         <p id="AboutMsg">ApnaGhar is India's online Property marketplace to rent residential properties. Adjudged as the most preferred real estate portal in India by
+            various independent surveys.</p>
+         <p id="copyrights">&copy; Copyright 05.04.2022 , All Rights Reserved .</p>
+         <p id="version">Version 1.0</p>
+
+      </div>
+      <div id="Feedback">
+         <p id="FeedbackHead">Feedback</p>
+         <p id="mailTxt">MAIL us at</p>
+         <p id="gmailIcon">
+            <span><i class="fa fa-google-plus gmail"></i></span><span> ApnaGhar0504@gmail.com</span>
+         </p>
+         <p id="sm">connect us through</p>
+         <p></p>
+         <p id="fIcon"><button onclick="window.location.href='https://www.youtube.com/channel/UCAyLY9OzOOPMd1_Mm9gayOg';"><i class="fa fa-youtube fCol" ></i></button></p>
+         <p id="iIcon"><button onclick="window.location.href='https://www.instagram.com/mohitpathak_18/'"><i
+                  class="fa fa-instagram iCol"></i> </button></p>
+      </div>
+   </div>
+</body>
+<script type="text/javascript">
+   var slideIndex = 1;
+   var factor = 1;
+   switchSlides(slideIndex);
+
+   setInterval(function addSlide() {
+      console.log("called");
+      slideIndex += factor;
+      console.log(slideIndex);
+      switchSlides(slideIndex);
+
+   }, 5000);
+   function switchSlides(n) {
+      console.log("wat");
+      var slides = document.getElementsByClassName("slides");
+      if (n > slides.length)
+         slideIndex = 1;
+      if (n < 1)
+         slideIndex = slides.length;
+      for (var i = 0; i < slides.length; i++)
+         slides[i].style.display = "none";
+      slides[slideIndex - 1].style.display = "block";
+   }
+   function nextSlide(x) {
+      slideIndex += x;
+      switchSlides(slideIndex);
+   }
+   $(document).ready(function () {
+      $("#FeedbackIcon").click(function () {
+         $('html,body').animate({
+            scrollTop: $("#Feedback").offset().top
+         }, 1500);
+      });
+      $("#AboutIcon").click(function () {
+         $('html,body').animate({
+            scrollTop: $("#About").offset().top
+         }, 1500);
+      });
+      $("#AboutUs").hover(function () {
+         $("#AboutUs").css("border-bottom", "2px solid #ff6600");
+      },
+         function () {
+            $("#AboutUs").css("border-bottom", "none");
+         }
+      );
+
+      $("#FeedbackHead").hover(function () {
+         $("#FeedbackHead").css("border-bottom", "2px solid #ff6600");
+      },
+         function () {
+            $("#FeedbackHead").css("border-bottom", "none");
+         }
+      );
+     
+      $("#fIcon").hover(function () {
+         $(".fcol").css("font-size", "30px");
+      },
+         function () {
+            $(".fcol").css("font-size", "20px");
+         }
+      );
+      $("#iIcon").hover(function () {
+         $(".iCol").css("font-size", "30px");
+      },
+         function () {
+            $(".iCol").css("font-size", "20px");
+         }
+      );
+   });
+</script>
+
+</html>

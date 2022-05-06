@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to ApnaGhar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <link rel="shortcut icon" href="./images/hrmlogo.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/welcome.css">
+</head>
+<body>
+<div id="header">
+    <img src="/images/hrmlogo.svg" alt="logos" onclick="location.href='/dashboard' " title="Add House" >
+
+  
+     <button id="logoutIcon" onclick="location.href='http://127.0.0.1:8081/logout'" type="button"><span class="glyphicon glyphicon-log-out logoutbtn" style="font-size:3vmin"></span></button>
+</div>
+<div id="profile">
+   
+    <p id="userName">Hi ,<br> <span><%= user.uname %></span></p>
+    <br>
+    <p id="msg">Welcome</p>
+    <div id="dashboardIcons">
+      <form class="temp" action="/dashboard/userProfile/shortList" method="GET">
+        <button type="submit" name="name" value="<%= user.username %>"><i class="material-icons" style="font-size:5vmin" title="ShortList" id="shortlistIcon">queue</i></button>
+    </form>
+        <img id="addhouse" src="/images/house.png" alt="logos" onclick="location.href='/house-register' " title="home page" >
+        </button>
+
+    </div>
+</div>
+<div id="preferenceForm">
+    <p id="title"><span id="title1">I'm looking for a </span><span id="title2">Size</span><span id="title3">In location</span></p>
+    <form id="pform" action="/dashboard/preference" method="GET">
+         <!-- <input type="text" list="Property" name="category" placeholder="House/flat" > -->
+         <input type="text" list="category" name="category" placeholder="House/flat" ng-model="category">
+   	   	   <datalist id="category">
+   	   	   	    <option value="House">
+   	   	   	    <option value="Flat">
+    
+                <option value="Other">
+   	   	   </datalist>
+         <input type="number" list="Size(BHK)" name="bedroom" placeholder="1 BHK"> 
+        
+         <datalist id="Size(BHK)">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+               
+        </datalist>
+        <input type="text" list="localities" name="Locality" placeholder="Locality" ng-model="Locality">
+        <datalist id="localities">
+              <option value="Vijay Nagar">
+              <option value="Sudama Nagar">
+           <option value="palasia">
+           <option value="Geeta bhawan">
+           <option value="Rajwada">
+           <option value="sapna sangita">
+           <option value="Other">
+        </datalist>
+        <input type="submit" id="submitBtn" name="submit" style="display: none;">
+    </form>
+</div>
+<div id="formbutton">
+    <label for="submitBtn" class="btn btn-default Custom-style">Search</label>
+</div>
+<div id="bckImage">
+    <img src="/images/bg.jpg">
+</div>
+<i class='far fa-laugh-wink rating' title="Rate Us" ></i>
+<div id="feedback">
+            <span>
+            <form action="/feedback" method="POST">
+              <button class="feedbackBtn" name="star" value="1" type="submit"><span class="glyphicon glyphicon-star stars0 " onclick="this.form.submit()"></span>
+              <button class="feedbackBtn" name="star" value="2" type="submit"><span class="glyphicon glyphicon-star stars1 " onclick="this.form.submit()"></span>
+              <button class="feedbackBtn" name="star" value="3" type="submit"><span class="glyphicon glyphicon-star stars2 " onclick="this.form.submit()"></span>
+              <button class="feedbackBtn" name="star" value="4" type="submit"><span class="glyphicon glyphicon-star stars3 " onclick="this.form.submit()"></span>
+              <button class="feedbackBtn" name="star" value="5" type="submit"><span class="glyphicon glyphicon-star stars4 " onclick="this.form.submit()"></span>
+            </form></span>
+</div>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+           
+          $("#feedback").hide();
+          $(".rating").click(function(){
+              $("#feedback").toggle(600);
+          })
+           
+           $(".stars0").hover(function(){
+                $(".stars0").css("color","#ffa366");
+           },
+             function()
+             {
+                $(".stars0").css("color","#545656");
+             }
+           );
+           $(".stars1").hover(function(){
+                $(".stars0").css("color","#ff944d");
+                $(".stars1").css("color","#ff944d");
+           },
+             function()
+             {
+                $(".stars0").css("color","#545656");
+                $(".stars1").css("color","#545656");
+             }
+           );
+           $(".stars2").hover(function(){
+                $(".stars0").css("color","#ff8533");
+                $(".stars1").css("color","#ff8533");
+                $(".stars2").css("color","#ff8533");
+           },
+             function()
+             {
+                $(".stars0").css("color","#545656");
+                $(".stars1").css("color","#545656");
+                $(".stars2").css("color","#545656");
+             }
+           );
+           $(".stars3").hover(function(){
+                $(".stars0").css("color","#ff751a");
+                $(".stars1").css("color","#ff751a");
+                $(".stars2").css("color","#ff751a");
+                $(".stars3").css("color","#ff751a");
+           },
+             function()
+             {
+                $(".stars0").css("color","#545656");
+                $(".stars1").css("color","#545656");
+                $(".stars2").css("color","#545656");
+                $(".stars3").css("color","#545656");
+             }
+           );$(".stars4").hover(function(){
+                $(".stars0").css("color","#ff6600");
+                $(".stars1").css("color","#ff6600");
+                $(".stars2").css("color","#ff6600");
+                $(".stars3").css("color","#ff6600");
+                $(".stars4").css("color","#ff6600");
+           },
+             function()
+             {
+                $(".stars0").css("color","#545656");
+                $(".stars1").css("color","#545656");
+                $(".stars2").css("color","#545656");
+                $(".stars3").css("color","#545656");
+                $(".stars4").css("color","#545656");
+             }
+           );
+    });
+</script>
+</html>

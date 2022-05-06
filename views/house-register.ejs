@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>start</title>
+	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/Capture.PNG">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css">
+   #header{
+               position:fixed;
+               top:0%;
+               width:100vw;
+               height:10%;
+               background:linear-gradient(to right, #040625,#0d064b);
+               border:0.1vmin solid white;
+               overflow: hidden;
+               }
+         #header img{
+            float: left;
+            width: 8vw;
+            height: 7.5vh;
+            background: rgb(203, 192, 192);
+            cursor: pointer;
+            margin-left: 0.5vw;
+            margin-top:0.5%;
+            /*border-radius: 15px;*/
+        } 
+        #Form{
+            position:absolute;
+            z-index:1;
+            top:3%;
+        }
+  
+       
+       .icons:hover {
+        background-color: white;
+        color:#ff6600;;
+       }
+       .headerDiv {
+  text-align: center;
+  font-size: 1.37vw;
+  font-family: "Krub", sans-serif;
+}
+
+#home{
+            position: absolute;
+            left:85%;
+            top:2.5%;
+            width:7%;
+            background-color: rgb(20, 28, 132);
+            height:7%;
+            color:rgb(17, 15, 105);
+            font-size:2.5vmin;
+            cursor: pointer;
+            border:4px double rgb(221, 0, 0);
+            
+            justify-content:center;
+        }
+        #homeTxt{
+            position:absolute;
+            top:4%;
+            left:15%;
+            font-size:3.5vmin;
+            letter-spacing:0.5vmin;
+            font-family:monospace;
+            font-weight:800;
+            color: rgb(255, 255, 255);
+        }
+        #homeIcon{
+            position:absolute;
+            top:25%;
+            left:35%;
+            color:rgb(202, 255, 12);
+        }
+        #bckImage>img{
+            position:relative;
+         
+            z-index: -1;
+            width:100%;
+            height:100%;
+            border-right:1px solid white;
+            border-bottom:1px solid white;
+            
+        }
+       /* #House-register{
+       	position:absolute;	
+       	opacity:0.8;
+       	margin-top:2%;
+       	margin-left:45%;
+       	width:50%;
+       	height:100vmin;
+        border-bottom: 1%; 
+        background-color: lightgrey;
+        border-radius: 1vmin;
+        padding: 2vmin;
+        
+       } */
+
+        #Form {
+        position:absolute;
+        z-index:1;
+        border-bottom: 15%; 
+        margin-top:3.2%;
+        margin-left :34%;
+      
+        width:35%;
+        height: 105%;  
+        background-color: rgb(173, 168, 168);
+        border-radius: 10px;
+        padding: 15px 22px;
+        padding-bottom:15px;
+        padding-top: 2px;
+       }
+  
+       button {
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 10px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:100%;
+        font-size: 1.5vw;
+        padding-right : 5%;
+        }
+        #btns{
+          margin-right:20px;
+        }
+       
+       
+       body{
+        overflow-x: hidden;
+        scroll-behavior:smooth;
+       }
+       input[type=rent], input[type=password], input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+       }
+       textarea, input[type=date], datalist, input[type=number], #motherTongue{
+        width: 100%;
+        padding: 10px 15px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+       }
+      input:focus, textarea:focus {
+      border: 3px solid #555;
+      }
+      #radio{
+        position: relative;
+        margin-top: -20px;
+      }
+     
+      ::placeholder, #radiotxt, b{
+        font-size: 1.25vw;
+        font-family: 'Krub', sans-serif;
+        color:black;
+      }
+      #flatradio{
+        margin: 0 20px 0 50px;
+      }
+      #houseRadio{
+        margin: 0 100px 0 20px;
+      }
+  
+      input[type=button], input[type=submit], #submitA ,#submitB, #submitC {
+      background-color: black;
+      border-radius: 5px;
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width:100%;
+      font-size: 1.5vw;
+      padding-right : 5%;
+      }
+      input[type=button]:hover, input[type=submit]:hover ,#submitA:hover ,#submitB:hover, #submitC:hover{
+      background-color: white; /* Green */
+      color: black;
+      border:2px solid black;
+      cursor: pointer;
+      }
+      *:focus{
+        outline:none;
+      }
+    </style>
+</head>
+<body>
+  
+  <div id="home" onclick="location.href='/dashboard' ">
+    <p id="homeTxt">Home</p><p><span id="homeIcon" class="glyphicon glyphicon-home"></span></p>
+</div>
+
+   <div id="House-register">
+   	   <form id="Form"  action="/house-register" method="POST">
+   	   	<div id="rForm1" ng-app="signA" ng-controller="ctrlA" name="formA">
+            <b style="color:green;">Please fill your details here</b>
+   	   	   <input type="text" id="username" name="username" placeholder="Owner Name" ng-model="username" required>
+   	   	   <span style="color:red" ng-show="formA.username.$dirty && formA.username.$invalid"><span ng-show="formA.username.$error.required"> Name is required</span></span><br>
+   	   	   <input type="text" id="mob" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Mobile Number" ng-model="mob" required>
+   	   	   <span style="color:red" ng-show="formA.mob.$dirty && formA.mob.$invalid"><span ng-show="formA.mob.$error.required">mobile number is required</span></span><br>
+   	   	   <input type="text" id="address" name="address" placeholder="Address" ng-model="address" required>
+   	   	   <span style="color:red" ng-show="formA.address.$dirty && formA.address.$invalid"><span ng-show="formA.address.$error.required">address is required</span></span>
+           <div><span style="color:red;"><i><%= housetaken %></i></span></div>
+           <br><div id="radio">
+           <span  id="houseRadio"><input type="radio" name="category" id="category" value="House"> <b id="radiotxt" >House</b></span>
+           <span id="flatRadio"><input type="radio" name="category" id="category" value="Flat" > <b id="radiotxt">Flat</b><br></span></div>
+   	   	   <input type="rent" id="rent" name="rent" placeholder="rent" ng-model="rent" required><span style="color:red" ng-show="formA.rent.$dirty && formA.rent.$invalid"><span ng-show="formA.rent.$error.required">rent is required</span></span><br>
+   	   	   <input type="number" id="bedroom" name="BHK" placeholder="BHK" ng-model="bhk" required><span style="color:red" ng-show="formA.bhk.$dirty && formA.bhk.$invalid"><span ng-show="formA.bhk.$error.required">Bhk number is required</span></span><br>
+
+   	   	   <textarea rows="2" cols="30" name="description" placeholder="House Description" ></textarea>
+   	   	   <input type="text" name="facing" ng-model="facing" placeholder="Facing"><span style="color:red" ng-show="formB.facing.$dirty && formB.facing.$invalid"></span><br>
+   	   	   <input type="text" list="localities" name="locality" placeholder="Locality" ng-model="Locality">
+   	   	   <datalist id="localities">
+   	   	   	    <option value="Vijay Nagar">
+   	   	   	    <option value="Sudama Nagar">
+                <option value="palasia">
+                <option value="Geeta bhawan">
+                <option value="Rajwada">
+                <option value="sapna sangita">
+   	   	   </datalist>
+             <button type="submit" id="submit" >Submit</button>
+   	   	   
+             <p><%=(typeof alertMsg!='undefined')? alertMsg:''%></p>
+             <input type="file"  name="image" multiple>
+   	   </div>
+   	  
+   </div>
+   <div id="bckImage">
+    <img src="/images/newbg.jpg"></div>
+   <script type="text/javascript">
+   	  var appA=angular.module('signA',[]);
+   	  appA.controller('ctrlA',function($scope){
+
+   	  });
+ 
+   	  angular.bootstrap(document.getElementById("rForm1"),['signA']);
+     
+	  
+   </script>
+
+   
+</body>
+<script type="text/javascript">
+  $(document).ready(function () {
+     $("#submit").click(function () {
+    
+        if (username.length == 0 || mob.length == 0 || mobile.length == 0 || address.length == 0 || rent.length == 0 || description.length == 0 || locality.length == 0 || facing.length == 0) {
+           alert("All Fields are Mandatory");
+        }
+  
+  
+    });
+    $("#homeIcon").hide();
+           $("#home").hover(function(){
+                $("#homeTxt").hide();
+                $("#homeIcon").show();
+           },
+              function(){
+              $("#homeTxt").show();
+                $("#homeIcon").hide();
+           });
+    
+    });
+     
+</script>
+
+</html>

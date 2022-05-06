@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preferences</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/Capture.PNG">
+    <link rel="stylesheet" href="/search.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+</head>
+<body>
+    <div id="header">
+        <img src="/images/hrmlogo.svg" alt="logos" onclick="location.href='/dashboard' " title="home page" >
+        <span  id="username"><p style="font-size:25px;"> Hi, <%= user.uname %> </p></span>
+    </div>
+    <div id="pContainer" >
+        <% for( let i=0; i< members.length; i++ ) { %>
+            <div id="eachContainer">
+                <form id="<%= members[i].ownername %>" action="/like" method="POST">
+                <div id="imgContainer" align="left">
+                    <% if (members[i].image) { %>
+                    <img class="imgFit" src="/houseImages/<%= members[i].mobile%>.jpg">
+                    <% } else { %>
+                    <img class="imgFit" src="/images/undefined.jpg" alt="Upload image">
+                    <% } %>
+                </div>
+                
+                <div id="fInfo" class="userInfo" >
+                    <p class="address"><span id="address" ></span><%= members[i].address %></span><span class="bedroom"> <%= members[i].catagory %><i class="fa fa-<%= members[i].catagory %>" id="gIcon"></i></span>
+                    <p class ="house-properties">
+                        <span class="cat">Category  :   </span><span class="catvalue"><%= members[i].category %></span>
+                        <span class="bed">Bedroom  :  </span><span class="bedvalue"><%= members[i].bedroom %>  BHK</span>
+                        <span  class="loc">Locality : </span><span class="locValue"><%= members[i].locality %> </span>
+                    </p>
+                    <p class="hrent">
+                        <span class="rent" >Rental_Price : </span><span class="rValue" > Rs <%= members[i].rent %>  </span>
+                        <span class="mno">Mobile :  </span><span class="num"><%= members[i].mobile %> </span>
+                        
+                        <p class="about">
+                            <span class="fKey">House_Facing : </span><span class="hValue"><%= members[i].facing %></span>
+                            <span class="desc">About :  </span><span class="mValue"><%= members[i].about %> </span>
+                    </p>
+
+                    
+                </div>
+                <button name="wishlist" id="btnwishlist" type="submit" value="<%= members[i].address %>" title="Wishlist"><span>
+                    <i class="fa fa-bookmark"></i></span></button>
+
+                
+            </div>
+        <% } %>
+    </div>
+    <div id="home" onclick="location.href='/dashboard' ">
+        <p id="homeTxt">Home</p><p><span id="homeIcon" class="glyphicon glyphicon-home"></span></p>
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $("#homeIcon").hide();
+           $("#home").hover(function(){
+                $("#homeTxt").hide();
+                $("#homeIcon").show();
+           },
+              function(){
+              $("#homeTxt").show();
+                $("#homeIcon").hide();
+           });
+    });
+</script>
+</html>

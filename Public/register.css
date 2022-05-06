@@ -1,0 +1,111 @@
+
+        #rForm1{
+            position:absolute;
+            z-index:2;
+            top:10%;
+        }
+        #rForm2{
+            margin-top: -15px;
+        }
+ 
+       #Register{
+       	position:relative;	
+       	opacity:0.8;
+       	margin-top:7%;
+       	margin-left:35%;
+       	width:30%;
+       	height:80vmin;
+        border-bottom: 15%; 
+        background-color: lightgrey;
+        border-radius: 1vmin;
+        padding: 2vmin;
+       }
+        #Form {
+        position:relative;
+        z-index:2;
+        border-bottom: 15%; 
+        margin-top:0.5%;
+        margin-left:3%;
+        width:90%;
+        height:45vmin;  
+        background-color: lightgrey;
+        border-radius: 10px;
+        padding: 15px 15px;
+        padding-bottom:15px;
+        padding-top: 15px;
+       }
+       .slideShow{
+           margin-top:-86vmin/*-650px*/;
+       }
+
+       #rightCtrl{
+           left:96%;
+       }
+       .slides >img{
+           position: absolute;/**/
+           left:0%;
+           width:100%;
+           top:2%;
+           height:110%;
+
+       }
+
+       input[type=email], input[type=password], input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+       }
+       textarea, input[type=date], datalist, input[type=number], #motherTongue{
+        width: 100%;
+        padding: 10px 15px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+       }
+      input:focus, textarea:focus {
+      border: 3px solid #555;
+      }
+      #radio{
+        position: relative;
+        margin-top: -20px;
+      }
+      ::placeholder, #radiotxt, b{
+        font-size: 1.25vw;
+        font-family: 'Krub', sans-serif;
+        color:black;
+      }
+      #maleRadio{
+        margin: 0 20px 0 50px;
+      }
+      #femaleRadio{
+        margin: 0 100px 0 20px;
+      }
+      #pvtRadio{
+        margin: 0 20px 0 20px;
+      }
+      input[type=button], input[type=submit], #submit {
+      background-color: black;
+      border-radius: 5px;
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width:100%;
+      font-size: 1.5vw;
+      padding-right : 5%;
+      }
+      input[type=button]:hover, input[type=submit]:hover #submit:hover{
+      background-color: white; /* Green */
+      color: black;
+      border:2px solid black;
+      cursor: pointer;
+      }
+      *:focus{
+        outline:none;
+      }
+    
